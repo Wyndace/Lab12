@@ -1,6 +1,6 @@
 package com.example.lab12.session
 
-import dagger.DefineComponent
+import dagger.hilt.DefineComponent
 import dagger.hilt.components.SingletonComponent
 
 /**

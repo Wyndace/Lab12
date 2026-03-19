@@ -16,6 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
+import com.example.lab12.di.MainApiClient
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File
@@ -33,6 +34,7 @@ import javax.inject.Inject
 class FileDownloadService : Service() {
 
     // Hilt автоматически внедряет зависимости через field injection
+    @MainApiClient
     @Inject
     lateinit var okHttpClient: OkHttpClient
 

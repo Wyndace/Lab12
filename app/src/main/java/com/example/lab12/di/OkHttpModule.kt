@@ -87,11 +87,4 @@ object OkHttpModule {
             .build()
     }
 
-    /**
-     * Предоставляем "дефолтный" OkHttpClient (без квалификатора) для обратной совместимости.
-     * Делегирует к основному API-клиенту.
-     */
-    @Provides
-    @Singleton
-    fun provideDefaultOkHttpClient(@MainApiClient client: OkHttpClient): OkHttpClient = client
 }
